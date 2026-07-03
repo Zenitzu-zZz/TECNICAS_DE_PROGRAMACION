@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caso-estudio-vectores-grupo-0X</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table td {
+            text-align: center;
+            padding: 5px;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        hr {
+            margin: 30px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Taller 02: Programación Modular y Vectores</h2>
+    <p>Asignatura: Técnica de programación</p>
+    
+    <hr>
+
+    <h3>Caso 1: Simulador de Factura de Ventas (Ecuador)</h3>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Seleccione Producto:</td>
+                    <td>
+                        <select id="select-producto">
+                            <option value="Leche" data-precio="1.00">Leche ($1.00)</option>
+                            <option value="Arroz" data-precio="1.80">Arroz ($1.80)</option>
+                            <option value="Aceite" data-precio="3.50">Aceite ($3.50)</option>
+                            <option value="Atún" data-precio="1.20">Atún ($1.20)</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cantidad:</td>
+                    <td><input type="number" id="id-cantidad-prod" value="1" min="1" size="5"></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="btn-agregar-producto">Agregar Producto</button>
+                        <button id="btn-vaciar-factura">Vaciar Factura</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br>
+    <table id="id-table-factura" border="1" cellspacing="1" cellpadding="1">
+        <thead>
+            <tr>
+                <td colspan="4"><b>Detalle de la Factura</b></td>
+            </tr>
+            <tr>
+                <td>Índice</td>
+                <td>Producto</td>
+                <td>Cantidad</td>
+                <td>Precio Unitario</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="4">No hay productos registrados</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <table>
+        <tbody>
+            <tr>
+                <td><button id="btn-calcular-factura">Calcular Totales</button></td>
+                <td>
+                    <input type="text" id="id-txt-resumen-factura" size="70" readonly placeholder="Resultados de la factura...">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h3>Caso 2: Cajero Bancario Inteligente</h3>
+    <div>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Monto ($):</td>
+                    <td><input type="number" id="id-monto-cajero" min="0.01" step="0.01" size="10"></td>
+                </tr>
+                <tr>
+                    <td>Tipo de Operación:</td>
+                    <td>
+                        <select id="select-operacion">
+                            <option value="Deposito">Depósito</option>
+                            <option value="Retiro">Retiro</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="btn-procesar-operacion">Procesar Operación</button>
+                        <button id="btn-vaciar-cajero">Reiniciar Cajero</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <br>
+    <table id="id-table-cajero" border="1" cellspacing="1" cellpadding="1">
+        <thead>
+            <tr>
+                <td colspan="3"><b>Historial de Movimientos</b></td>
+            </tr>
+            <tr>
+                <td>N° Movimiento</td>
+                <td>Tipo</td>
+                <td>Monto</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td colspan="3">No hay movimientos realizados</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <br>
+    <table>
+        <tbody>
+            <tr>
+                <td><button id="btn-calcular-cajero">Calcular Estado de Cuenta</button></td>
+                <td>
+                    <input type="text" id="id-txt-resumen-cajero" size="70" readonly placeholder="Resultados del cajero...">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script type="module" src="tarea11.js"></script> 
+</body>
+
+</html>
